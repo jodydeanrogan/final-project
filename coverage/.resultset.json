@@ -23,6 +23,29 @@
         1,
         null
       ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        8,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        10,
+        null,
+        null,
+        null
+      ],
       "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
         1,
         1,
@@ -40,15 +63,6 @@
         0,
         0
       ],
-      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/jodyrogan/FinalProject/blender/app/jobs/application_job.rb": [
         0,
         0
@@ -60,6 +74,6 @@
         0
       ]
     },
-    "timestamp": 1485792891
+    "timestamp": 1485804858
   }
 }

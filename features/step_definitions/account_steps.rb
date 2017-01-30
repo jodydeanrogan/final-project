@@ -1,7 +1,3 @@
-When(/^I navigate to "([^"]*)"$/) do |path|
-  visit(path)
-end
-
 Then(/^I should see the "([^"]*)" form label$/) do |label|
   expect(page.body).to match(label)
 end
