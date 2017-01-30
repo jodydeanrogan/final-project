@@ -1,0 +1,65 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/site_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1485792891
+  }
+}
