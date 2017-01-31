@@ -1,0 +1,63 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<% if user_signed_in? %>
+				<h2>Cosmos</h2>
+
+				<p>Culture? Rogue cosmos permanence of the stars cosmos extraplanetary dream of the mind's eye, worldlets,
+					great turbulent clouds brain is the seed of intelligence worldlets preserve and cherish that pale blue dot science explorations.
+					Something incredible is waiting to be known Hypatia explorations Apollonius of Perga rings of Uranus,
+					another world descended from astronomers the sky calls to us,
+					of brilliant syntheses culture, a mote of dust suspended in a sunbeam quasar take root and flourish,
+					intelligent beings finite but unbounded? Venture another world birth, Jean-François Champollion?</p>
+			<% else %>
+	      <h2>Register</h2>
+
+	      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	        <%= devise_error_messages! %>
+
+	        <div class="field">
+	          <%= f.label :email %><br />
+	          <%= f.email_field :email, autofocus: true %>
+	        </div>
+
+	        <div class="field">
+	          <%= f.label :password %>
+	          <% if @minimum_password_length %>
+	          <em>(<%= @minimum_password_length %> characters minimum)</em>
+	          <% end %><br />
+	          <%= f.password_field :password, autocomplete: "off" %>
+	        </div>
+
+	        <div class="field">
+	          <%= f.label :password_confirmation %><br />
+	          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+	        </div>
+
+	        <div class="actions">
+	          <%= f.submit "Sign up", class: "btn btn-primary" %>
+	        </div>
+	      <% end %>
+
+	      <%= render "devise/shared/links" %>
+			<% end %>
+		</div>
+		<div class="col-md-8">
+			<h2>Lorem Ipsum</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+			In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+			Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+			Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+			Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+			In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+			Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+		</div>
+	</div>
+</div>

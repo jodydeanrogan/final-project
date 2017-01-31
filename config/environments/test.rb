@@ -1,3 +1,4 @@
+require 'rack_session_access'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -36,6 +37,7 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  config.middleware.use RackSessionAccess::Middleware
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
@@ -50,7 +52,7 @@ def log_on_as(user)
       user = warden_class.find_by(email: user) if user.is_a?(String)
       page.set_rack_session("warden.user.#{warden_scope}.key" => warden_class.serialize_into_session(user))
   elsif user.is_a? ActiveRecord::Base
-      page.set_rack_session('#{user.class.underscore}_id'.to_sym => user.id)
+      page.set_rack_session("#{user.class.underscore}_id".to_sym => user.id)
   elsif user.is_a? Fixnum
       page.set_rack_session(user_id: user)
   end

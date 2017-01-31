@@ -1,26 +1,49 @@
-<h2>Log in</h2>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+      <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
+        <div class="actions">
+          <%= f.submit "Log in", class: "btn btn-primary" %>
+        </div>
+      <% end %>
 
-<%= render "devise/shared/links" %>
+      <%= render "devise/shared/links" %>
+		</div>
+		<div class="col-md-8">
+			<h2>Lorem Ipsum</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+			Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+			In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+			Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+			Aliquam lorem ante, dapibus in, viverra quis, feugiat a.</p>
+			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+			Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+			In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+			Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+		</div>
+	</div>
+</div>

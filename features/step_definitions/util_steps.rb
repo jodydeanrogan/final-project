@@ -1,3 +1,12 @@
+Given(/^sample data is loaded$/) do
+  require './db/seeds'
+  extend SeedData
+end
+
+Given(/^I am logged in as "([^"]*)"$/) do |email|
+  log_on_as(email)
+end
+
 When(/^I navigate to "([^"]*)"$/) do |path|
   visit(path)
 end

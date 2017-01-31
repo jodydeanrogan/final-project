@@ -5,6 +5,28 @@
         1,
         null
       ],
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
+        1,
+        1,
+        6,
+        null,
+        8,
+        3,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        null,
+        null
+      ],
       "/Users/jodyrogan/FinalProject/blender/app/helpers/site_helper.rb": [
         1,
         null
@@ -25,10 +47,6 @@
       ],
       "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
         1,
-        null,
-        1,
-        null,
-        null,
         null,
         1,
         null,
@@ -74,6 +92,6 @@
         0
       ]
     },
-    "timestamp": 1485804858
+    "timestamp": 1485878078
   }
 }
