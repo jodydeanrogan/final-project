@@ -6,8 +6,10 @@ Feature: An unregistered user creates a user account
     When I navigate to "/home"
     Then I should see the "Email" form label
       And I should be required to fill in "user_email" with a "Email" when registering
+      And I should see "Email can't be blank" on the page
     Then I should see the "Password" form label
       And I should be required to fill in "user_password" with a "Password" when registering
+      And I should see "Password can't be blank" on the page
 
   @poltergeist
   Scenario: A user visits login page to log into site

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: '/log_in', registration: '/home', password: '/forgot_password'}
+  devise_for :users, path: '', path_names: { sign_in: '/log_in', registration: '/home', password: '/forgot_password' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   root to: "site#home"
   resources :site, only: [:home, :log_in]
   get '/home' => 'site#home'

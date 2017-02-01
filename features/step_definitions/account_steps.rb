@@ -13,7 +13,7 @@ end
 Then(/^I should be required to fill in "([^"]*)" with a "([^"]*)" when signing in$/) do |selector, attribute|
   fill_in(selector, :with => '')
   within('div.actions') do
-    click_on("Log in")
+    click_on("Login")
   end
   expect(page.body).to match("Log in")
 end

@@ -7,7 +7,7 @@ Feature: An unregistered user visits home page
     Then I should see "Blender" on the page
       And I should see "Home" on the page
       And I should see "Activities" on the page
-      And I should see "Log in" on the page
+      And I should see "Login" on the page
       And I should see "Register" on the page
       And I should see "Lorem Ipsum" on the page
       And I should see "Learn more" on the page

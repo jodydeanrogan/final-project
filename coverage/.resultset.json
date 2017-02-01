@@ -8,7 +8,7 @@
       "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
         1,
         1,
-        6,
+        10,
         null,
         8,
         3,
@@ -16,7 +16,6 @@
         null,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -33,9 +32,22 @@
       ],
       "/Users/jodyrogan/FinalProject/blender/app/models/user.rb": [
         1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
         null,
         null,
         1,
+        2,
+        2,
+        0,
+        null,
         null,
         null,
         null
@@ -51,15 +63,15 @@
         1,
         null,
         1,
-        8,
-        null,
-        null,
-        1,
         4,
         null,
         null,
         1,
-        10,
+        5,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         null
@@ -67,6 +79,131 @@
       "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
         1,
         1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/users/omniauth_callbacks_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1485961923
+  },
+  "RSpec": {
+    "coverage": {
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
+        1,
+        1,
+        4,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/site_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        6,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/users/omniauth_callbacks_controller.rb": [
+        1,
+        1,
+        null,
+        2,
+        null,
+        2,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/channels/application_cable/channel.rb": [
@@ -92,6 +229,6 @@
         0
       ]
     },
-    "timestamp": 1485878078
+    "timestamp": 1485961889
   }
 }
