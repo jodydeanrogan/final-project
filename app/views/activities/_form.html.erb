@@ -1,0 +1,30 @@
+<%= form_for(@activity) do |f| %>
+  <div class="row">
+  	<div class="col-md-4">
+      <div class="field">
+        <div class="image">
+          <%= image_tag @activity.image[:large].url(public: true) if @activity.image %>
+          <%= image_tag "default-image.jpg" unless @activity.image %>
+        </div>
+        <%= f.label :image %><br>
+        <input name="activity[image]" type="hidden" value="<%= @activity.cached_image_data %>">
+        <span class="btn btn-primary btn-file">
+          Upload image<%= f.file_field :image %>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_area :description %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<% if @activity.errors.any? %>
+  <div class="alert alert-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+      <ul>
+        <% @activity.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+<% end %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="field">
+        <h1>Create Activity</h1>
+      </div>
+    </div>
+  </div>
+
+    <%= render 'form', activity: @activity %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="field">
+        <%= link_to 'Back', activities_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<% if activity.errors.any? %>
+  <div class="alert alert-alert">
+    <button type="button" class="close" data-dismiss="alert">x</button>
+      <ul>
+        <% activity.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+<% end %>

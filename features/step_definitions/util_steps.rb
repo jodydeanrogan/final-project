@@ -14,3 +14,15 @@ end
 Then(/^I should see "([^"]*)" on the page$/) do |content|
   page.should have_content(content)
 end
+
+When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, text|
+  fill_in(field, :with => text)
+end
+
+Then(/^I click "([^"]*)"$/) do |button_value|
+  click_on(button_value)
+end
+
+When(/^I add image to "([^"]*)"$/) do |file|
+  attach_file(file, Rails.root + 'app/assets/images/default-image.jpg')
+end

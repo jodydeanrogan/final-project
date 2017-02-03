@@ -17,6 +17,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'figaro'
 gem 'omniauth-facebook'
+gem 'shrine'
+gem 'aws-sdk'
+gem 'roda'
+gem 'jquery-fileupload-rails'
+gem "image_processing"
+gem "mini_magick", ">= 4.3.5"
 
 group :development, :test do
   gem 'rspec-rails'

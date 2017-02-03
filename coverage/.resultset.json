@@ -1,14 +1,29 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/activities_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jodyrogan/FinalProject/blender/app/helpers/application_helper.rb": [
         1,
+        1,
+        4,
+        null,
+        null,
+        1,
+        8,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
         1,
         1,
-        10,
+        13,
         null,
         8,
         3,
@@ -59,24 +74,81 @@
       ],
       "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
         1,
-        null,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/activities_controller.rb": [
         1,
         null,
         1,
-        4,
+        null,
+        1,
+        1,
         null,
         null,
         1,
-        5,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        2,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
         null,
         1,
         0,
         null,
         null,
+        1,
+        1,
+        null,
         null
       ],
-      "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
+      "/Users/jodyrogan/FinalProject/blender/app/models/activity.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null
@@ -102,12 +174,27 @@
         0
       ]
     },
-    "timestamp": 1485961923
+    "timestamp": 1486121752
   },
   "RSpec": {
     "coverage": {
+      "/Users/jodyrogan/FinalProject/blender/app/helpers/activities_helper.rb": [
+        1,
+        null
+      ],
       "/Users/jodyrogan/FinalProject/blender/app/helpers/application_helper.rb": [
         1,
+        1,
+        6,
+        null,
+        null,
+        1,
+        7,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
@@ -162,26 +249,83 @@
         1,
         null
       ],
-      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/activities_controller.rb": [
         1,
         null,
         1,
         null,
         1,
-        6,
+        0,
         null,
         null,
         1,
-        7,
         null,
         null,
         1,
         0,
         null,
         null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/controllers/site_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/activity.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null
@@ -205,30 +349,8 @@
         0,
         null,
         null
-      ],
-      "/Users/jodyrogan/FinalProject/blender/app/channels/application_cable/channel.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/jodyrogan/FinalProject/blender/app/channels/application_cable/connection.rb": [
-        0,
-        0,
-        0,
-        0
-      ],
-      "/Users/jodyrogan/FinalProject/blender/app/jobs/application_job.rb": [
-        0,
-        0
-      ],
-      "/Users/jodyrogan/FinalProject/blender/app/mailers/application_mailer.rb": [
-        0,
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1485961889
+    "timestamp": 1486121483
   }
 }

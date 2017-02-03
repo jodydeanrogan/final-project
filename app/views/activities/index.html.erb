@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="field">
+        <h1>Activities</h1>
+      </div>
+    </div>
+
+  </div>
+
+    <% @activities.each do |activity| %>
+      <div class="row">
+    		<div class="col-md-4">
+          <%= image_tag activity.image[:large].url(public: true) %>
+        </div>
+        <div class="col-md-8">
+          <h2><%= activity.title %></h2>
+          <p><%= activity.description %></p>
+        </div>
+    	</div>
+      <br>
+    <% end %>
