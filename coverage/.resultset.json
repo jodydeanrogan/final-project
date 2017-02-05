@@ -12,7 +12,7 @@
         null,
         null,
         1,
-        8,
+        7,
         null,
         null,
         1,
@@ -23,7 +23,7 @@
       "/Users/jodyrogan/FinalProject/blender/app/helpers/devise_helper.rb": [
         1,
         1,
-        13,
+        12,
         null,
         8,
         3,
@@ -95,26 +95,17 @@
         null,
         1,
         1,
+        1,
+        9,
+        null,
         null,
         null,
         1,
         null,
         null,
-        1,
-        1,
-        null,
-        1,
         1,
         0,
-        0,
         null,
-        2,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
         0,
         0,
         0,
@@ -132,6 +123,18 @@
         0,
         0,
         null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -141,13 +144,21 @@
         null,
         null,
         1,
-        1,
+        0,
         null,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/models/activity.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/task.rb": [
         1,
         1,
         1,
@@ -174,7 +185,7 @@
         0
       ]
     },
-    "timestamp": 1486121752
+    "timestamp": 1486316028
   },
   "RSpec": {
     "coverage": {
@@ -263,6 +274,9 @@
         null,
         1,
         0,
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -328,6 +342,14 @@
         1,
         1,
         1,
+        1,
+        1,
+        null
+      ],
+      "/Users/jodyrogan/FinalProject/blender/app/models/task.rb": [
+        1,
+        1,
+        1,
         null
       ],
       "/Users/jodyrogan/FinalProject/blender/app/controllers/users/omniauth_callbacks_controller.rb": [
@@ -351,6 +373,6 @@
         null
       ]
     },
-    "timestamp": 1486121483
+    "timestamp": 1486315640
   }
 }

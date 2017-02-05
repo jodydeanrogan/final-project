@@ -1,8 +1,8 @@
 $(document).on("turbolinks:load", function() {
-  $("[type=file]").fileupload({
+  $("[type=file]#activity_image").fileupload({
     add: function(e, data) {
       console.log("add", data);
-      data.progressBar = $('<div class="progress" style="width: 300px"><div class="progress-bar"></div></div>').insertAfter(".image");
+      data.progressBar = $('<div class="progress" style="width: 300px"><div class="progress-bar"></div></div>').insertAfter(".activity-image");
       var options = {
         extension: data.files[0].name.match(/(\.\w+)?$/)[0], // set the file extension
         _: Date.now() // prevent caching
@@ -25,8 +25,8 @@ $(document).on("turbolinks:load", function() {
       console.log("done", data);
       data.progressBar.remove();
       var imageUrl = data.url + "/" + data.formData.key;
-      $('.image').empty();
-      $('.image').append('<img src=' + imageUrl + '>');
+      $('.activity-image').empty();
+      $('.activity-image').append('<img src=' + imageUrl + '>');
 
       var image = {
         id:       data.formData.key.match(/cache\/(.+)/)[1], // we have to remove the prefix part
@@ -39,14 +39,6 @@ $(document).on("turbolinks:load", function() {
       };
 
       $("input[name='activity[image]'][type=hidden]").val(JSON.stringify(image));
-
-      // var params = {
-      //   activity: {image: JSON.stringify(image)},
-      //   _csrf: $("input[name=_csrf]").val(),
-      // }
-      //
-      // $.ajax("/activities", {method: 'POST', data: params})
-
     }
   });
 

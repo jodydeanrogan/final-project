@@ -11,6 +11,9 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    9.times do
+      @activity.tasks.new
+    end
   end
 
   def edit
@@ -57,6 +60,6 @@ class ActivitiesController < ApplicationController
   end
 
   def activity_params
-    params.require(:activity).permit(:image, :title, :description)
+    params.require(:activity).permit(:image, :title, :description, tasks_attributes: [:id, :activity_id, :image, :learning_objectives, :instructions, :hints, :tag, :_destroy])
   end
 end
