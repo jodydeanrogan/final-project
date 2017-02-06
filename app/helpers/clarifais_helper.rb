@@ -1,0 +1,2 @@
+module ClarifaisHelper
+end

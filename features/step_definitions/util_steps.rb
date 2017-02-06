@@ -23,6 +23,8 @@ Then(/^I click "([^"]*)"$/) do |button_value|
   click_on(button_value)
 end
 
-When(/^I add image to "([^"]*)"$/) do |file|
-  attach_file(file, Rails.root + 'app/assets/images/default-image.jpg')
+When(/^I add image to "([^"]*)"$/) do |field|
+  Capybara.ignore_hidden_elements = false
+  page.attach_file(field, Rails.root + 'app/assets/images/default-image.jpg')
+  save_and_open_page
 end

@@ -5,7 +5,7 @@ Feature: A registered user visits create activity page
   Given sample data is loaded
     And I am logged in as "joebloggs@test.com"
 
-  @wip
+
 
   @poltergeist
   Scenario: A registered user navigates to the create activity page to create activity then edit it

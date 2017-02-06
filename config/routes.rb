@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "site#home"
   resources :site, only: [:home, :log_in]
   resources :activities
+  get '/get_image_tags' => 'clarifais#get_image_tags'
   get '/home' => 'site#home'
   get '/log_in' => 'site#log_in'
   get '/log_in' => 'site#forgot_password'
