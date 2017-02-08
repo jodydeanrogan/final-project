@@ -18,12 +18,12 @@
         <div class="col-md-8">
           <h2><%= activity.title %></h2>
           <p><%= activity.description %></p>
-
-          <%= link_to 'Participate', activity_path(activity), class: "btn btn-primary" %>
-
-          <% if activity.activity_creator_id == current_user.id %>
-            <%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-primary" %>
-            <%= link_to 'Destroy', activity, method: :delete, class: "btn btn-primary" %>
+          <% if current_user %>
+            <%= link_to 'Participate', activity_path(activity), class: "btn btn-primary" %>
+            <% if activity.activity_creator_id == current_user.id %>
+              <%= link_to 'Edit', edit_activity_path(activity), class: "btn btn-primary" %>
+              <%= link_to 'Destroy', activity, method: :delete, class: "btn btn-primary" %>
+            <% end %>
           <% end %>
         </div>
     	</div>
