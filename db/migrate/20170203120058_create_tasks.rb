@@ -6,7 +6,7 @@ class CreateTasks < ActiveRecord::Migration[5.0]
       t.text :learning_objectives
       t.text :instructions
       t.text :hints
-      t.integer :tag
+      t.string :tag
 
       t.timestamps
     end

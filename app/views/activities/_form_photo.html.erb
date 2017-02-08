@@ -1,0 +1,20 @@
+<%= form_for(@photo) do |f| %>
+  <div class="row">
+  	<div class="col-md-4">
+      <div class="field">
+        <div class="photo-image">
+          <%= image_tag @photo.image[:large].url(public: true) if @photo.image %>
+          <%= image_tag "default-image.jpg" unless @photo.image %>
+        </div>
+        <%#= f.label :image %>
+        <%= f.hidden_field :image, value: @photo.cached_image_data %>
+        <span class="btn btn-primary btn-file">
+          Capture photo<%= f.file_field :image %>
+        </span>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="task-wrapper"></div>
+    </div>
+  </div>
+<% end %>

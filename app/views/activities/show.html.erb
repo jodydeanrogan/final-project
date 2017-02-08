@@ -1,14 +1,50 @@
+<% if @photo.errors.any? %>
+	<div class="alert alert-alert">
+		<button type="button" class="close" data-dismiss="alert">x</button>
+			<ul>
+				<% @photo.errors.full_messages.each do |message| %>
+				<li>
+					<%= message %>
+				</li>
+				<% end %>
+			</ul>
+	</div>
+<% end %>
+
 <div class="container-fluid">
 	<div class="row">
+		<div class="col-md-12">
+			<div class="field">
+				<h1>Activity</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-md-4">
-      <%= image_tag @activity.image[:large].url(public: true) %>
+			<%= image_tag @activity.image[:large].url(public: true) if @activity.image %>
+			<%= image_tag "default-image.jpg" unless @activity.image %>
     </div>
 	  <div class="col-md-8">
-      <h2><%= @activity.title %></h2>
-      <p><%= @activity.description %></p>
+			<div class="activity-<%= @activity.id %>">
+	      <h2><%= @activity.title %></h2>
+	      <p><%= @activity.description %></p>
 
-      <%= link_to 'Edit', edit_activity_path(@activity), class: "btn btn-primary" %>
-      <%= link_to 'Back', activities_path, class: "btn btn-primary" %>
+				<% if @activity.activity_creator_id == current_user.id %>
+					<%= link_to 'Edit', edit_activity_path(@activity), class: "btn btn-primary" %>
+					<%= link_to 'Destroy', @activity, method: :delete, class: "btn btn-primary" %>
+				<% end %>
+			</div>
     </div>
 	</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="field">
+        <h1>Capture Task</h1>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'activities/form_photo', photo: @photo %>
+
 </div>

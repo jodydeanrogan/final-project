@@ -45,6 +45,7 @@ group :test do
   gem 'tsuite'
   gem 'rails-controller-testing'
   gem 'selenium-webdriver', '< 3.0'
+  gem "shrine-memory"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

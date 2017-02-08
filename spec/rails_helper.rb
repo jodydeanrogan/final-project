@@ -1,13 +1,21 @@
 require 'simplecov'
 require 'factory_girl_rails'
 require 'support/factory_girl'
+require "shrine/storage/memory"
 SimpleCov.start 'rails' do
   add_filter 'app/channels/application_cable/channel.rb'
   add_filter 'app/channels/application_cable/connection.rb'
   add_filter 'app/jobs/application_job.rb'
   add_filter 'app/mailers/application_mailer.rb'
   add_filter 'app/models/image_uploader.rb'
+  add_filter 'app/controllers/clarifais_controller.rb'
+  add_filter 'app/controllers/activities_controller.rb'
 end
+
+Shrine.storages = {
+  cache: Shrine::Storage::Memory.new,
+  store: Shrine::Storage::Memory.new,
+}
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'

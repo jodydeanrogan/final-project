@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :created_activities, class_name: "Activity", foreign_key: :activity_creator_id, inverse_of: :activity_creator
+  has_many :activity_users
+  has_many :worked_activities, through: :activity_users, class_name: "Activity", source: :activity
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   devise :omniauthable, :omniauth_providers => [:facebook]

@@ -16,6 +16,10 @@ module SeedData
         User.create(email: "joebloggs@test.com", password: "Wiki1975")
       end
 
+      unless User.find_by(email: "janebloggs@test.com")
+        User.create(email: "janebloggs@test.com", password: "Wiki1975")
+      end
+
     end
 
   end

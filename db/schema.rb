@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206101100) do
+ActiveRecord::Schema.define(version: 20170207112811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,19 @@ ActiveRecord::Schema.define(version: 20170206101100) do
     t.text     "image_data"
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "activity_creator_id"
+    t.index ["activity_creator_id"], name: "index_activities_on_activity_creator_id", using: :btree
+  end
+
+  create_table "activity_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "activity_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["activity_id"], name: "index_activity_users_on_activity_id", using: :btree
+    t.index ["user_id"], name: "index_activity_users_on_user_id", using: :btree
   end
 
   create_table "clarifais", force: :cascade do |t|
@@ -30,13 +41,23 @@ ActiveRecord::Schema.define(version: 20170206101100) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "photos", force: :cascade do |t|
+    t.integer  "activity_user_id"
+    t.integer  "task_id"
+    t.text     "image_data"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["activity_user_id"], name: "index_photos_on_activity_user_id", using: :btree
+    t.index ["task_id"], name: "index_photos_on_task_id", using: :btree
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.integer  "activity_id"
     t.text     "image_data"
     t.text     "learning_objectives"
     t.text     "instructions"
     t.text     "hints"
-    t.integer  "tag"
+    t.string   "tag"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["activity_id"], name: "index_tasks_on_activity_id", using: :btree
@@ -61,5 +82,9 @@ ActiveRecord::Schema.define(version: 20170206101100) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "activity_users", "activities"
+  add_foreign_key "activity_users", "users"
+  add_foreign_key "photos", "activity_users"
+  add_foreign_key "photos", "tasks"
   add_foreign_key "tasks", "activities"
 end
