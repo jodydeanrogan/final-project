@@ -14452,6 +14452,10 @@ var widget = $.widget;
 
 
 }).call(this);
+$(document).ready(function() {
+  var images = ['jumbotron-1.jpg', 'jumbotron-2.jpg', 'jumbotron-3.jpg'];
+  $('.jumbotron').css({'background-image': 'url(/assets/jumbotron/' + images[Math.floor(Math.random() * images.length)] + ')'});
+});
 $(document).on("turbolinks:load", function() {
   $("[type=file]#activity_image").fileupload({
     add: function(e, data) {
@@ -14495,7 +14499,63 @@ $(document).on("turbolinks:load", function() {
       $("input[name='activity[image]'][type=hidden]").val(JSON.stringify(image));
     }
   });
+});
+$(document).on("turbolinks:load", function() {
+  $("[type=file]#photo_image").fileupload({
+    add: function(e, data) {
+      console.log("add", data);
+      data.progressBar = $('<div class="progress" style="width: 300px"><div class="progress-bar"></div></div>').insertAfter(".photo-image");
+      var options = {
+        extension: data.files[0].name.match(/(\.\w+)?$/)[0], // set the file extension
+        _: Date.now() // prevent caching
+      }
+      $.getJSON("/images/upload/cache/presign", options, function(result) {
+        console.log("presign", result);
+        data.formData = result['fields'];
+        data.url = result['url'];
+        data.paramName = "file";
+        data.submit();
+      });
+    },
+    progress: function(e, data) {
+      console.log("progress", data);
+      var progress = parseInt(data.loaded / data.total * 100, 10);
+      var percentage = progress.toString() + '%'
+      data.progressBar.find(".progress-bar").css("width", percentage).html(percentage);
+    },
+    done: function(e, data) {
+      var activityId = $("[class^='activity']").attr("class").replace(/\D/g,'');
+      console.log("done", data);
+      data.progressBar.remove();
+      var imageUrl = data.url + "/" + data.formData.key;
+      $('.photo-image').empty();
+      $('.photo-image').append('<img src=' + imageUrl + '>');
 
+      var image = {
+        id:       data.formData.key.match(/cache\/(.+)/)[1], // we have to remove the prefix part
+        storage:  'cache',
+        metadata: {
+          size:      data.files[0].size,
+          filename:  data.files[0].name.match(/[^\/\\]+$/)[0], // IE return full path
+          mime_type: data.files[0].type
+        }
+      };
+
+      $("input[name='photo[image]'][type=hidden]").val(JSON.stringify(image));
+      $(".task-wrapper").empty();
+      $(".task-wrapper").html("<div class='box'><h2>Checking activity tasks</h2></div>");
+
+      $.ajax({
+        url: "/check_photo_tags",
+        type: "get",
+        data: { image_url: imageUrl, activity_id: activityId },
+      });
+
+
+
+
+    }
+  });
 });
 $(document).on("turbolinks:load", function() {
   $("[type=file][id^=activity_tasks_attributes]").each(function () {
@@ -14540,6 +14600,8 @@ $(document).on("turbolinks:load", function() {
         };
         var imageHidden = "#activity_tasks_attributes_" + taskId + "_image"
         $(imageHidden).val(JSON.stringify(image));
+        $(".task-tag-message-" + taskId).empty();
+        $(".task-tag-message-" + taskId).html("<strong>Waiting for tags</strong>");
 
         $.ajax({
           url: "/get_image_tags",
@@ -14552,6 +14614,7 @@ $(document).on("turbolinks:load", function() {
             $.each(tags, function(index, tag) {
               $("#activity_tasks_attributes_" + taskId + "_tag").append($('<option></option>').val(tag).html(tag));
             });
+            $(".task-tag-message-" + taskId).empty();
           }
         });
       }

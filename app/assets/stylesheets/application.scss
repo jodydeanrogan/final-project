@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
-@import 'layout';
+@import 'box';
+@import 'button';
 @import 'forms';
+@import 'jumbotron';
+@import 'layout';
 @import 'messages';
+@import 'navbar';
