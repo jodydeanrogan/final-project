@@ -1,37 +1,43 @@
 <%= form_for(@activity) do |f| %>
   <div class="row">
   	<div class="col-md-4">
-      <div class="field">
-        <div class="activity-image">
-          <%= image_tag @activity.image[:large].url(public: true) if @activity.image %>
-          <%= image_tag "default-image.jpg" unless @activity.image %>
+      <div class="box">
+        <div class="field">
+          <div class="activity-image">
+            <%= image_tag @activity.image[:large].url(public: true) if @activity.image %>
+            <%= image_tag "default-image.jpg" unless @activity.image %>
+          </div>
+          <%#= f.label :image %>
+          <%= f.hidden_field :image, value: @activity.cached_image_data %>
+          <span class="btn btn-primary btn-file">
+            Upload image<%= f.file_field :image %>
+          </span>
         </div>
-        <%#= f.label :image %>
-        <%= f.hidden_field :image, value: @activity.cached_image_data %>
-        <span class="btn btn-primary btn-file">
-          Upload image<%= f.file_field :image %>
-        </span>
       </div>
     </div>
     <div class="col-md-8">
-      <div class="field">
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
-      </div>
-      <div class="field">
-        <%= f.label :description %><br>
-        <%= f.text_area :description, rows: 2 %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Save activity", class: "btn btn-primary" %>
+			<div class="box">
+        <div class="field">
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </div>
+        <div class="field">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, rows: 2 %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Save activity", class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <div class="field">
-        <h1>Activity Tasks (max 9)</h1>
+      <div class="header-box">
+        <div class="field">
+          <h1>Activity Tasks (max 9)</h1>
+        </div>
       </div>
     </div>
   </div>

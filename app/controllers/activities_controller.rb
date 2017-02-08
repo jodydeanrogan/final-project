@@ -62,7 +62,8 @@ class ActivitiesController < ApplicationController
 
   def destroy
     @activity.tasks.destroy_all
-    @activity.activity_creator_id = ""
+    @activity.activity_users.destroy_all
+    @activity.activity_creator.destroy
     @activity.destroy
     respond_to do |format|
       format.html { redirect_to activities_url, notice: 'Activity has been successfully destroyed.' }

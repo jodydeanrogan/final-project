@@ -41,7 +41,7 @@ $(document).on("turbolinks:load", function() {
 
       $("input[name='photo[image]'][type=hidden]").val(JSON.stringify(image));
       $(".task-wrapper").empty();
-      $(".task-wrapper").html("<h2>Checking activity tasks</h2>");
+      $(".task-wrapper").html("<div class='box'><h2>Checking activity tasks</h2></div>");
 
       $.ajax({
         url: "/check_photo_tags",

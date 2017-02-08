@@ -1,0 +1,15 @@
+.jumbotron {
+  p, h2 {
+    color: #fff;
+    font-weight: 300;
+  }
+}
+
+.jumbotron {
+    position: relative;
+    background: url("jumbotron/jumbotron-1.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}

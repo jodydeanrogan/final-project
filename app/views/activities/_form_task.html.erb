@@ -1,37 +1,41 @@
 <div class="row task-<%= task_fields.index %>">
   <div class="col-md-4">
-    <div class="field">
-      <div class="task-image-<%= task_fields.index %>">
-        <%= image_tag @activity.tasks[task_fields.index].image[:large].url(public: true) if @activity.tasks[task_fields.index].image %>
-        <%= image_tag "default-image.jpg" unless @activity.tasks[task_fields.index].image %>
+    <div class="box">
+      <div class="field">
+        <div class="task-image-<%= task_fields.index %>">
+          <%= image_tag @activity.tasks[task_fields.index].image[:large].url(public: true) if @activity.tasks[task_fields.index].image %>
+          <%= image_tag "default-image.jpg" unless @activity.tasks[task_fields.index].image %>
+        </div>
+        <%#= task_fields.label :image %>
+        <%= task_fields.hidden_field :image, value: @activity.tasks[task_fields.index].cached_image_data %>
+        <span class="btn btn-primary btn-file">
+          Upload image<%= task_fields.file_field :image %>
+        </span>
+        <span class="task-tag-<%= task_fields.index %>">
+          <%= task_fields.label :tag %>:
+          <%= task_fields.select :tag, [@activity.tasks[task_fields.index].tag] %>
+          <span class="task-tag-message-<%= task_fields.index %>"></span>
+        </span>
       </div>
-      <%#= task_fields.label :image %>
-      <%= task_fields.hidden_field :image, value: @activity.tasks[task_fields.index].cached_image_data %>
-      <span class="btn btn-primary btn-file">
-        Upload image<%= task_fields.file_field :image %>
-      </span>
-      <span class="task-tag-<%= task_fields.index %>">
-        <%= task_fields.label :tag %>:
-        <%= task_fields.select :tag, [@activity.tasks[task_fields.index].tag] %>
-        <span class="task-tag-message-<%= task_fields.index %>"></span>
-      </span>
     </div>
   </div>
   <div class="col-md-8">
-    <div class="field">
-      <%= task_fields.label :learning_objectives %><br>
-      <%= task_fields.text_area :learning_objectives, rows: 2 %>
-    </div>
-    <div class="field">
-      <%= task_fields.label :instructions %><br>
-      <%= task_fields.text_area :instructions, rows: 2 %>
-    </div>
-    <div class="field">
-      <%= task_fields.label :hints %><br>
-      <%= task_fields.text_area :hints, rows: 2 %>
-    </div>
-    <div class="field">
-      Delete: <%= task_fields.check_box :_destroy %>
+		<div class="box">
+      <div class="field">
+        <%= task_fields.label :learning_objectives %><br>
+        <%= task_fields.text_area :learning_objectives, rows: 2 %>
+      </div>
+      <div class="field">
+        <%= task_fields.label :instructions %><br>
+        <%= task_fields.text_area :instructions, rows: 2 %>
+      </div>
+      <div class="field">
+        <%= task_fields.label :hints %><br>
+        <%= task_fields.text_area :hints, rows: 2 %>
+      </div>
+      <!-- <div class="field">
+        Delete: <%= task_fields.check_box :_destroy %>
+      </div> -->
     </div>
   </div>
 </div>

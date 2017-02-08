@@ -2,5 +2,5 @@ $(".task-wrapper").empty();
 <% if @task %>
   $(".task-wrapper").append("<%= j render 'activities/task', task: @task %>");
 <% else %>
-  $(".task-wrapper").append("<h2>Unable to find match to task</h2><h3>Please try again</h3>");
+  $(".task-wrapper").append("<div class='box'><h2>Unable to find match to task</h2><h3>Please try again</h3></div>");
 <% end %>

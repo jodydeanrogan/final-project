@@ -1,20 +1,44 @@
-.new_user {
-  input[type="email"], input[type="password"] {
-    width: 66%;
-  }
-}
-
 .btn {
   margin: 10px 0px;
 }
 
 input[type="text"] {
   width: 66%;
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  background-color: #F5F5F5;
+  border-style: solid;
+  padding: 5px;
+  border-width: 1px;
+}
+
+input[type="email"], input[type="password"] {
+  width: 66%;
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  background-color: #F5F5F5;
+  border-style: solid;
+  padding: 5px;
+  border-width: 1px;
 }
 
 textarea {
   width: 100%;
   max-width: 100%;
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  background-color: #F5F5F5;
+  border-style: solid;
+  padding: 5px;
+  border-width: 1px;
+}
+
+select {
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  background-color: #F5F5F5;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .btn-file {
@@ -35,4 +59,10 @@ textarea {
     background: white;
     cursor: inherit;
     display: block;
+}
+
+input:focus, textarea:focus {
+  background : #fff;
+  border-radius: 6px;
+  outline: none;
 }
