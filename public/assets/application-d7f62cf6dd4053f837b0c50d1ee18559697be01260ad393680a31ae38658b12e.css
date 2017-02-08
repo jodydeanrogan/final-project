@@ -237,25 +237,39 @@ img {
 
 
  */
-/* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
-body {
-  margin: 0 auto;
-  max-width: 2000px;
-}
-
-/* line 6, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
-body {
-  background-color: #fdfffd;
-}
-
-/* line 10, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
-main {
+/* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/box.scss */
+.box {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  border-style: solid;
+  border-width: 1px;
   margin-bottom: 15px;
 }
 
-/* line 14, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
-img {
-  max-width: 100%;
+/* line 11, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/box.scss */
+.header-box {
+  padding: 15px;
+}
+
+/* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/button.scss */
+.btn-primary {
+  color: #fff;
+  background-color: #2f74aa;
+  border-color: #2f74aa;
+}
+
+/* line 7, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/button.scss */
+.btn-primary:hover {
+  color: #fff;
+  background-color: #ffaa39;
+  border-color: #ffaa39;
+}
+
+/* line 13, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/button.scss */
+.progress {
+  margin: 10px 0px;
 }
 
 /* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/forms.scss */
@@ -336,6 +350,43 @@ input:focus, textarea:focus {
   outline: none;
 }
 
+/* line 2, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/jumbotron.scss */
+.jumbotron p, .jumbotron h2 {
+  color: #fff;
+  font-weight: 300;
+}
+
+/* line 8, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/jumbotron.scss */
+.jumbotron {
+  position: relative;
+  background: url("jumbotron/jumbotron-1.jpg") center center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
+body {
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+/* line 6, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
+body {
+  background-color: #fdfffd;
+}
+
+/* line 10, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
+main {
+  margin-bottom: 15px;
+}
+
+/* line 14, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/layout.scss */
+img {
+  max-width: 100%;
+}
+
 /* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/messages.scss */
 .alert {
   margin-left: 15px;
@@ -372,4 +423,47 @@ input:focus, textarea:focus {
   border-color: #d6e9c6;
   color: #468847;
   text-align: left;
+}
+
+/* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom {
+  background-color: #2f74aa;
+  color: #fff;
+}
+
+/* line 6, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-nav > li > a {
+  color: #fff;
+}
+
+/* line 9, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* line 14, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* line 19, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-brand {
+  color: #fff;
+}
+
+/* line 23, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-brand:hover {
+  color: #ffaa39;
+}
+
+/* line 26, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-custom .navbar-toggle {
+  background-color: #eee;
+}
+
+/* line 30, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/navbar.scss */
+.navbar-footer .navbar-text {
+  color: #fff;
 }
