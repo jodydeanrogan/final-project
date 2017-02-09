@@ -10,7 +10,7 @@
 }
 
 /* line 11, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/box.scss */
-.header-box {
+.top-box, .bottom-box {
   padding: 15px;
 }
 /* line 1, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/button.scss */
@@ -249,7 +249,7 @@ img {
 }
 
 /* line 11, /Users/jodyrogan/FinalProject/blender/app/assets/stylesheets/box.scss */
-.header-box {
+.top-box, .bottom-box {
   padding: 15px;
 }
 

@@ -27,7 +27,7 @@ class ActivitiesController < ApplicationController
   def new
     @activity = Activity.new
     9.times do
-      @activity.tasks.new(tag: "undefined")
+      @activity.tasks.new
     end
   end
 
@@ -63,7 +63,7 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.tasks.destroy_all
     @activity.activity_users.destroy_all
-    @activity.activity_creator.destroy
+    @activity.activity_creator_id = ""
     @activity.destroy
     respond_to do |format|
       format.html { redirect_to activities_url, notice: 'Activity has been successfully destroyed.' }

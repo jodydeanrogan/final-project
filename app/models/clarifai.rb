@@ -20,8 +20,8 @@ class Clarifai < ApplicationRecord
     response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
       http.request(request)
     end
-    response_code = JSON.parse(response.code)
-    body = JSON.parse(response.body)
+    response_code = JSON.parse(response.code, :quirks_mode => true)
+    body = JSON.parse(response.body, :quirks_mode => true)
     token = body["access_token"]
     expires = body["expires_in"]
     @token.update(access_token: token, expires_in: expires)
@@ -50,8 +50,8 @@ class Clarifai < ApplicationRecord
     response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
       http.request(request)
     end
-    response_code = JSON.parse(response.code)
-    body = JSON.parse(response.body)
+    response_code = JSON.parse(response.code, :quirks_mode => true)
+    body = JSON.parse(response.body, :quirks_mode => true)
     concepts = body["outputs"][0]["data"]["concepts"]
     @tags = concepts.map do |concept|
       concept["name"]
