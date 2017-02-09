@@ -20,7 +20,7 @@
         <div class="col-md-8">
     			<div class="box">
             <h2><%= activity.title %></h2>
-            <p><%= activity.description %></p>
+            <p><%= simple_format(activity.description) %></p>
             <% if current_user %>
               <%= link_to 'Participate', activity_path(activity), class: "btn btn-primary" %>
               <% if activity.activity_creator_id == current_user.id %>
