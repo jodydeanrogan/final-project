@@ -10,7 +10,7 @@
           <%#= f.label :image %>
           <%= f.hidden_field :image, value: @photo.cached_image_data %>
           <span class="btn btn-primary btn-file">
-            Capture photo<%= f.file_field :image %>
+            Capture photo<%= f.file_field :image, accept: "image/*", capture: "camera" %>
           </span>
         </div>
       </div>
