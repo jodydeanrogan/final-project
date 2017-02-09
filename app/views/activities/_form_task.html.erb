@@ -13,7 +13,7 @@
         </span>
         <span class="task-tag-<%= task_fields.index %>">
           <%= task_fields.label :tag %>:
-          <%= task_fields.select :tag, [@activity.tasks[task_fields.index].tag], include_blank: "undefined" %>
+          <%= task_fields.select :tag, options_for_select([@activity.tasks[task_fields.index].tag]), prompt: "undefined"%>
           <span class="task-tag-message-<%= task_fields.index %>"></span>
         </span>
       </div>
