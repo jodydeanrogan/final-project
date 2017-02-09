@@ -13,6 +13,6 @@ Feature: A registered user visits home page
       And I should see "Activities" on the page
       And I should see "Dashboard" on the page
       And I should see "Log out" on the page
-      And I should see "Lorem Ipsum" on the page
+      And I should see "Blending technology and education" on the page
       And I should see "Learn more" on the page
-      And I should see "Cosmos" on the page
+      And I should see "Search for activities" on the page

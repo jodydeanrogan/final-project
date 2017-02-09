@@ -9,6 +9,6 @@ Feature: An unregistered user visits home page
       And I should see "Activities" on the page
       And I should see "Login" on the page
       And I should see "Register" on the page
-      And I should see "Lorem Ipsum" on the page
+      And I should see "Blending technology and education" on the page
       And I should see "Learn more" on the page
       And I should see "Register" on the page
