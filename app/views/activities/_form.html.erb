@@ -42,9 +42,7 @@
 
   <div class="tasks">
     <%= f.fields_for :tasks do |task_fields| %>
-
       <%= render 'activities/form_task', task_fields: task_fields %>
-
     <% end %>
   </div>
 

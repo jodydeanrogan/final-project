@@ -5,8 +5,8 @@
 input[type="text"] {
   width: 66%;
   border-radius: 6px;
-  border-color: #DCDCDC;
-  background-color: #F5F5F5;
+  border-color: #dcdcdc;
+  background-color: #f5f5f5;
   border-style: solid;
   padding: 5px;
   border-width: 1px;
@@ -15,8 +15,8 @@ input[type="text"] {
 input[type="email"], input[type="password"] {
   width: 66%;
   border-radius: 6px;
-  border-color: #DCDCDC;
-  background-color: #F5F5F5;
+  border-color: #dcdcdc;
+  background-color: #f5f5f5;
   border-style: solid;
   padding: 5px;
   border-width: 1px;
@@ -26,8 +26,8 @@ textarea {
   width: 100%;
   max-width: 100%;
   border-radius: 6px;
-  border-color: #DCDCDC;
-  background-color: #F5F5F5;
+  border-color: #dcdcdc;
+  background-color: #f5f5f5;
   border-style: solid;
   padding: 5px;
   border-width: 1px;
@@ -35,8 +35,8 @@ textarea {
 
 select {
   border-radius: 6px;
-  border-color: #DCDCDC;
-  background-color: #F5F5F5;
+  border-color: #dcdcdc;
+  background-color: #f5f5f5;
   border-style: solid;
   border-width: 1px;
 }
@@ -56,7 +56,7 @@ select {
     filter: alpha(opacity=0);
     opacity: 0;
     outline: none;
-    background: white;
+    background: #fff;
     cursor: inherit;
     display: block;
 }
