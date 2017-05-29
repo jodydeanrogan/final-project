@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## FINAL PROJECT
 
-Things you may want to cover:
+After having completed 12 weeks of immersive training at WeGotCoders, I was tasked with completing and presenting a final project with the following criteria:
 
-* Ruby version
+* Build an app from scratch
+* Two 1 week sprints
+* 1:1 Code to test ratio, > 90% test coverage required
+* Present to industry
 
-* System dependencies
+## BLENDER
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Project: EduTech app for teachers to bring their classrooms alive
+* Why?: Truly blended learning and peer to peer interaction at the highest level
+* What makes me excited?: Bringing the very latest technologies into the classroom
+* Key technologies: Rails 5.0.1, Devise, Omniauth, Shrine, Clarifai API, Facebook API
